@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 jmeter_url="http://us.mirrors.quenda.co/apache//jmeter/binaries/apache-jmeter-4.0.tgz"
 jmeter_plugins_manager="http://search.maven.org/remotecontent?filepath=kg/apc/jmeter-plugins-manager/1.3/jmeter-plugins-manager-1.3.jar"
