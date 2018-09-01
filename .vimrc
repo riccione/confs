@@ -1,7 +1,9 @@
 " vim conf file
 
+" https://github.com/junegunn/vim-plug
 call plug#begin('~/.vim/plugs')
 " Initialize plugin system
+Plug 'https://github.com/sjbach/lusty.git'
 call plug#end()
 
 "General rules
@@ -37,3 +39,17 @@ set noerrorbells	" prevent vim from beeping
 set hidden			" hide buffer
 set backspace=indent,eol,start " Backspace behaves as expected
 set guioptions=T	" enable toolbar
+
+" Disable the directional keys
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+imap <up> <nop>
+imap <up> <nop>
+imap <down> <nop>
+imap <left> <nop>
+imap <right> <nop>
+
+" Press the j 2 times in row to return to the normal mode
+:imap jj <Esc>
