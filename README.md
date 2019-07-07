@@ -7,8 +7,24 @@
 **Usage**
 
 ```
-bash jmeter.sh
+$ bash jmeter.sh
 ```
 
-**JDK**
+### C - tools to compile C code
+
+**Usage**
+
+```
+$ bash c.sh
+```
+
+### .vimrc - config file for VIM
+
+**Usage**
+
+```
+copy file to user directory
+```
+
+### JDK
 JDK install manually from https://openjdk.java.net/
