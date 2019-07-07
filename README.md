@@ -10,12 +10,5 @@
 bash jmeter.sh
 ```
 
-### jdk.sh - bash script for installing JDK 10
-
-!Don't forget to update urls
-
-**Usage**
-
-```
-bash jdk.sh
-```
+**JDK**
+JDK install manually from https://openjdk.java.net/
