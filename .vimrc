@@ -1,67 +1,75 @@
-" vim conf file
-
-"General rules
-colorscheme badwolf	" set color scheme
-set antialias
-
-set title	        " show title
-
-syntax enable       " enable syntax processing
+set background=dark
+colorscheme solarized
+let g:solarized_termcolors=256
 filetype on
 filetype plugin on
 filetype indent on
+syntax on
+set number
+set background=dark
+set nocompatible
+set relativenumber
+set cursorline
+"set cursorcolumn
+set tabstop=4 softtabstop=4
+set shiftwidth=4
+set smarttab
+set smartindent
+set expandtab
+set nobackup
+set scrolloff=10
+set nowrap
+set showcmd
+set showmode
+set history=100
+set encoding=utf-8
+set noswapfile
+set incsearch
+set guicursor=
+" enable folding
+set foldmethod=syntax
 
-set tabstop=4
-set wrap            " wrap lines if they are too long
-set ruler	        " display cursor position
-set number	        " display line numbers
-set showcmd         " show command in bottom bar
-set cursorline      " highlight current line
-set showmatch       " highlight matching [{()}]
-set wildmenu        " visual autocomplete for command menu
-set scrolloff=3		" display 3 lines around cursor for scrolling
-" Search
-set ignorecase		" ignore case when searching
-set smartcase		" search with case when there is any Uppercase char
-set incsearch		" highlight search results when typing
-set hlsearch		" highlight search results
+" https://vi.stackexchange.com/questions/356/how-can-i-set-up-a-ruler-at-a-specific-column
+" https://stackoverflow.com/questions/1272173/in-vim-how-do-i-break-one-really-long-line-into-multiple-lines
+set colorcolumn=80
+set tw=80
+set fo+=t
 
-" Beep
-set visualbell		" prevent vim from beeping
-set noerrorbells	" prevent vim from beeping
+" automatic closing brackets
+" https://stackoverflow.com/questions/21316727/automatic-closing-brackets-for-vim
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
 
-set hidden			" hide buffer
-set backspace=indent,eol,start " Backspace behaves as expected
-set guioptions=T	" enable toolbar
+" show full path to the file and show status always
+" https://unix.stackexchange.com/questions/111558/how-can-i-constantly-see-the-current-filename-in-vim
+set laststatus=2
+set statusline+=%F
 
-" Disable the directional keys - enable only if you want to use hjkl
-"map <up> <nop>
-"map <down> <nop>
-"map <left> <nop>
-"map <right> <nop>
-"imap <up> <nop>
-"imap <up> <nop>
-"imap <down> <nop>
-"imap <left> <nop>
-"imap <right> <nop>
+" autosave
+" https://stackoverflow.com/questions/6991638/how-to-auto-save-a-file-every-1-second-in-vim/27387138#27387138
+autocmd TextChanged,TextChangedI * silent write
 
-" Press the j 2 times in row to return to the normal mode
-:imap jj <Esc>
+" for YAML files
+autocmd Filetype yaml setlocal ts=2 sts=2 sw=2 expandtab
+let g:indentLine_char = '⦙'
 
-" Run python with F9
-autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
-autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!python3' shellescape(@%,1)<CR>
+call plug#begin()
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" for YAML
+Plug 'https://github.com/Yggdroot/indentLine'
 
-" Vundle plugin manager
-Plugin 'gmarik/Vundle.vim'
+" for CSV
+Plug 'https://github.com/mechatroner/rainbow_csv'
 
-" add plugins below
-" 
-" ...
-"
+" for Rust
+Plug 'rust-lang/rust.vim'
 
-call vundle#end()
-filetype plugin indent on
+" for statusline
+Plug 'itchyny/lightline.vim'
+
+call plug#end()
