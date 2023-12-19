@@ -4,7 +4,7 @@ sudo apt update
 
 sudo apt upgrade -y
 
-sudo apt install vim curl tree ufw unzip tmux podman freecad keepassxc firefox chromium -y
+sudo apt install vim curl tree ufw unzip tmux calcurse neofetch podman freecad keepassxc firefox chromium -y
 
 # install joplin
 wget -O - https://raw.githubusercontent.com/laurent22/joplin/dev/Joplin_install_and_update.sh | bash
