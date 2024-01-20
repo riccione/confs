@@ -4,12 +4,14 @@ sudo apt update
 
 sudo apt upgrade -y
 
-sudo apt install vim curl tree ufw unzip tmux calcurse neofetch podman freecad keepassxc firefox chromium -y
+sudo apt install vim curl tree ufw unzip tmux calcurse \
+    neofetch podman freecad keepassxc firefox chromium \
+    smartmontools claws-mail claws-mail-fancy-plugin -y
 
 # install joplin
 wget -O - https://raw.githubusercontent.com/laurent22/joplin/dev/Joplin_install_and_update.sh | bash
 
-# install cura
+# install cura or different slicer
 
 # conf ufw
 sudo ufw default deny incoming
