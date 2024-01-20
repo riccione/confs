@@ -13,6 +13,9 @@ wget -O - https://raw.githubusercontent.com/laurent22/joplin/dev/Joplin_install_
 
 # install cura or different slicer
 
+# install poetry
+curl -sSL https://install.python-poetry.org | python3 -
+
 # conf ufw
 sudo ufw default deny incoming
 sudo ufw default allow outgoing
