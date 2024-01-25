@@ -29,6 +29,9 @@ set guicursor=
 " enable folding
 set foldmethod=syntax
 
+" remap Esc
+inoremap jk <Esc>
+
 " https://vi.stackexchange.com/questions/356/how-can-i-set-up-a-ruler-at-a-specific-column
 " https://stackoverflow.com/questions/1272173/in-vim-how-do-i-break-one-really-long-line-into-multiple-lines
 set colorcolumn=80
