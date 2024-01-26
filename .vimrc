@@ -55,7 +55,10 @@ set statusline+=%F
 
 " autosave
 " https://stackoverflow.com/questions/6991638/how-to-auto-save-a-file-every-1-second-in-vim/27387138#27387138
-autocmd TextChanged,TextChangedI * silent write
+" autocmd TextChanged,TextChangedI * silent write
+
+" insted of autosave - let's try to map a key to save
+nnoremap zz :update<cr>
 
 " for YAML files
 autocmd Filetype yaml setlocal ts=2 sts=2 sw=2 expandtab
