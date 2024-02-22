@@ -32,6 +32,10 @@ set foldmethod=syntax
 " remap Esc
 inoremap jk <Esc>
 
+" F5 to execute !python3 %
+command! -nargs=0 RunPy !python3 %
+nnoremap <F5> :RunPy<CR>
+
 " https://vi.stackexchange.com/questions/356/how-can-i-set-up-a-ruler-at-a-specific-column
 " https://stackoverflow.com/questions/1272173/in-vim-how-do-i-break-one-really-long-line-into-multiple-lines
 set colorcolumn=80
@@ -60,9 +64,21 @@ set statusline+=%F
 " insted of autosave - let's try to map a key to save
 nnoremap zz :update<cr>
 
+" exit vim only
+nnoremap qq :q<cr>
+
 " for YAML files
 autocmd Filetype yaml setlocal ts=2 sts=2 sw=2 expandtab
 let g:indentLine_char = '⦙'
+
+" for markdown files
+autocmd BufNewFile,BufRead *.md set filetype=markdown
+set conceallevel=0
+" line below basically disables indentLine Plugin
+let g:indentLine_setConceal=0
+
+" NERDTree
+map <F4> :NERDTreeToggle<CR>"]
 
 call plug#begin()
 
@@ -77,5 +93,8 @@ Plug 'rust-lang/rust.vim'
 
 " for statusline
 Plug 'itchyny/lightline.vim'
+
+" NERDTree
+Plug 'preservim/nerdtree'
 
 call plug#end()
