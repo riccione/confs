@@ -1,12 +1,11 @@
+set nocompatible
+syntax on
 set background=dark
-colorscheme solarized
-let g:solarized_termcolors=256
+colorscheme PaperColor
 filetype on
 filetype plugin on
 filetype indent on
-syntax on
 set number
-set background=dark
 set nocompatible
 set relativenumber
 set cursorline
