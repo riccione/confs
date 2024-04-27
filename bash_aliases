@@ -1,5 +1,0 @@
-alias ll='ls -l'
-alias la='ls -A'
-alias cp='cp -v'
-alias mv='mv -v'
-alias vimw='vim -u ~/.vimrc_writer'
