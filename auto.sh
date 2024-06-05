@@ -4,7 +4,7 @@ sudo apt update
 
 sudo apt upgrade -y
 
-sudo apt install vim curl tree ufw unzip tmux calcurse \
+sudo apt install vim-nox curl tree ufw unzip tmux calcurse \
     neofetch podman freecad keepassxc firefox chromium \
     smartmontools claws-mail claws-mail-fancy-plugin \
     fzf foliate -y
