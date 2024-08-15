@@ -7,7 +7,7 @@ sudo apt upgrade -y
 sudo apt install vim-nox curl tree ufw unzip tmux calcurse \
     neofetch podman freecad keepassxc firefox chromium \
     smartmontools claws-mail claws-mail-fancy-plugin \
-    fzf foliate -y
+    fzf foliate bat -y
 
 # add veracrypt
 
